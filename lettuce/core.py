@@ -363,7 +363,7 @@ class Step(object):
         else:
             self.passed = False
             self.failed = True
-            assert not steps_failed, steps_failed[0].why.exception
+            assert not steps_failed, steps_failed[0].why.traceback
 
     def run(self, ignore_case):
         """Runs a step, trying to resolve it on available step
